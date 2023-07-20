@@ -1,19 +1,20 @@
-package com.pratica.java2023.Entities;
+package com.pratica.java2023.entities;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "orders")
-public class OrdersEntity {
+public class OrdersEntity implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "orders_id")
     private long orders_id;
 
     @ManyToOne
-    @JoinColumn(name="customer_id", referencedColumnName="customer_id", foreignKey=@ForeignKey(name = "FK__orders__customer__440B1D61"))
+    @JoinColumn(name="customers_id", referencedColumnName="customers_id", foreignKey=@ForeignKey(name = "FK__orders__customer__440B1D61"))
     private CustomerEntity customer;
 
     @ManyToOne

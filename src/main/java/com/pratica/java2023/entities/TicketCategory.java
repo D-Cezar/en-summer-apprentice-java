@@ -1,11 +1,13 @@
-package com.pratica.java2023.Entities;
+package com.pratica.java2023.entities;
 
 import jakarta.persistence.*;
+
+import java.io.Serializable;
 
 
 @Entity
 @Table(name = "ticket_category")
-public class TicketCategory {
+public class TicketCategory implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

@@ -1,12 +1,13 @@
-package com.pratica.java2023.Entities;
+package com.pratica.java2023.entities;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 
 
 @Entity
-@Table(name = "Customers")
-public class CustomerEntity {
+@Table(name = "Customer")
+public class CustomerEntity implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "customers_id")
@@ -18,7 +19,5 @@ public class CustomerEntity {
     @Column(name = "email", length = 30)
     private String email;
 
-//    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<OrdersEntity> orders;
-
+    public CustomerEntity(){}
 }

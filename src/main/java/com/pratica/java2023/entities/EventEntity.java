@@ -1,12 +1,13 @@
-package com.pratica.java2023.Entities;
+package com.pratica.java2023.entities;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
 @Table(name = "event")
-public class EventEntity {
+public class EventEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

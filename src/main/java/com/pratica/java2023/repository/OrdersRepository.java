@@ -1,7 +1,14 @@
 package com.pratica.java2023.repository;
 
-import com.pratica.java2023.entities.OrdersEntity;
+import com.pratica.java2023.entities.Orders;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OrdersRepository extends CrudRepository<OrdersEntity, Long> {
+import java.util.List;
+
+@Repository
+public interface OrdersRepository extends CrudRepository<Orders, Long> {
+    List<Orders> findAllOrdersByCustomer_Id(long id);
+    long findTicketCategoryIdById(long id);
+
 }

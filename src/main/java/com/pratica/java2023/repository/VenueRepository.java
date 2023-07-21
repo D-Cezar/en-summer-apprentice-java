@@ -1,7 +1,9 @@
 package com.pratica.java2023.repository;
 
-import com.pratica.java2023.entities.VenueEntity;
+import com.pratica.java2023.entities.Venue;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface VenueRepository extends CrudRepository<VenueEntity,Long> {
+@Repository
+public interface VenueRepository extends CrudRepository<Venue,Long> {
 }

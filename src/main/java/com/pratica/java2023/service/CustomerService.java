@@ -1,11 +1,12 @@
 package com.pratica.java2023.service;
 
-import com.pratica.java2023.entities.CustomerEntity;
+import com.pratica.java2023.entities.Customer;
 import com.pratica.java2023.repository.CustomerRepository;
 import com.pratica.java2023.service.interfaces.CustomerServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -16,22 +17,27 @@ public class CustomerService implements CustomerServiceInterface {
     private CustomerRepository customerRepository;
 
     @Override
-    public void saveCustomer(CustomerEntity customer){
+    public void saveCustomer(Customer customer){
         customerRepository.save(customer);
     }
 
     @Override
-    public void deleteCustomer(CustomerEntity customer){
+    public void deleteCustomer(Customer customer){
         customerRepository.delete(customer);
     }
 
     @Override
-    public Optional<CustomerEntity> findCustomer(long id){
+    public Optional<Customer> findCustomer(long id){
         return customerRepository.findById(id);
     }
 
     @Override
     public void deleteCustomerById(long id){
         customerRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Customer> findAllCustomers() {
+        return (List<Customer>) customerRepository.findAll();
     }
 }

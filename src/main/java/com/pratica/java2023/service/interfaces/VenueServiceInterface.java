@@ -1,15 +1,18 @@
 package com.pratica.java2023.service.interfaces;
 
-import com.pratica.java2023.entities.VenueEntity;
+import com.pratica.java2023.entities.Venue;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface VenueServiceInterface {
-    void saveVenue(VenueEntity venue);
+    void saveVenue(Venue venue);
 
-    void deleteVenue(VenueEntity venue);
+    void deleteVenue(Venue venue);
 
     void deleteVenueById(long id);
 
-    Optional<VenueEntity> findVenue(long id);
+    Optional<Venue> findVenue(long id);
+
+    List<Venue> findAllVenues();
 }

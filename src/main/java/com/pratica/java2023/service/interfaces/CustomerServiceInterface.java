@@ -1,12 +1,15 @@
 package com.pratica.java2023.service.interfaces;
 
-import com.pratica.java2023.entities.CustomerEntity;
+import com.pratica.java2023.entities.Customer;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface CustomerServiceInterface {
-        void saveCustomer(CustomerEntity customer);
-        void deleteCustomer(CustomerEntity customer);
-        Optional<CustomerEntity> findCustomer(long id);
+        void saveCustomer(Customer customer);
+        void deleteCustomer(Customer customer);
+        Optional<Customer> findCustomer(long id);
         void deleteCustomerById(long id);
+
+        List<Customer> findAllCustomers();
 }

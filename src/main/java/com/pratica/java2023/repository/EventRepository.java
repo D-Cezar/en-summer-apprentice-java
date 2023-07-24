@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface EventRepository extends CrudRepository<Event,Long> {
-    List<Event> findAllByVenue_IdAndEventTypeName(long venueId, String eventType);
+    List<Event> findAllByVenue_IdAndEventType_Name(long venueId, String eventType);
 }

@@ -9,7 +9,7 @@ import java.util.Date;
 @Table(name = "orders")
 public class Orders implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "orders_id")
     private long id;
 
@@ -85,6 +85,15 @@ public class Orders implements Serializable {
                   TicketCategory ticketCategory, Date orderedAt,
                   int numberOfTickets, double totalPrice) {
         this.id = id;
+        this.customer = customer;
+        this.ticketCategory = ticketCategory;
+        this.orderedAt = orderedAt;
+        this.numberOfTickets = numberOfTickets;
+        this.totalPrice = totalPrice;
+    }
+    public Orders(Customer customer,
+                  TicketCategory ticketCategory, Date orderedAt,
+                  int numberOfTickets, double totalPrice) {
         this.customer = customer;
         this.ticketCategory = ticketCategory;
         this.orderedAt = orderedAt;

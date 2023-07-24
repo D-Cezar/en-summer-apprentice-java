@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Table(name = "event_type")
 public class EventType implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "event_type_id")
     private long eventTypeId;
 

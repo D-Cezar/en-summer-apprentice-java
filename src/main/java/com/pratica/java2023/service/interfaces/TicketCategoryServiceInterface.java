@@ -19,5 +19,5 @@ public interface TicketCategoryServiceInterface {
 
     List<TicketCategory> findAllTicketCategoryByEvent(Event event);
 
-    long findEvent_IdById(long id);
+    long findEventIdById(long id);
 }

@@ -46,7 +46,7 @@ public class TicketCategoryService implements TicketCategoryServiceInterface {
     }
 
     @Override
-    public long findEvent_IdById(long id){
-        return ticketCategoryRepository.findEvent_IdById(id);
+    public long findEventIdById(long id){
+        return ticketCategoryRepository.findEventIdById(id);
     }
 }

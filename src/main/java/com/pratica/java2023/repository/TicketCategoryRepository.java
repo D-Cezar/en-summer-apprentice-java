@@ -10,5 +10,6 @@ import java.util.List;
 @Repository
 public interface TicketCategoryRepository extends CrudRepository<TicketCategory,Long> {
     List<TicketCategory> findAllTicketCategoryByEvent(Event event);
-    long findEvent_IdById(long id);
+
+    long findEventIdById(long id);
 }

@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class TicketCategory implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "ticket_category_id")
     private long id;
 

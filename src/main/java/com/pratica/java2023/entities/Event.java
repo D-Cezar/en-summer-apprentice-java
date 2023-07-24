@@ -10,7 +10,7 @@ import java.sql.Date;
 public class Event implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "event_id")
     private long id;
 

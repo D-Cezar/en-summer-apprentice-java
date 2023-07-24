@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface OrdersRepository extends CrudRepository<Orders, Long> {
     List<Orders> findAllOrdersByCustomer_Id(long id);
-    long findTicketCategoryIdById(long id);
+
+    long findOrdersByTicketCategoryId(long orderId);
 
 }

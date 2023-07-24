@@ -9,6 +9,26 @@ public class SecondGetDTO {
     int numberOfTickets;
     double totalPrice;
 
+    public long getEventId() {
+        return eventId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public long getTicketCategoryId() {
+        return ticketCategoryId;
+    }
+
+    public int getNumberOfTickets() {
+        return numberOfTickets;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
     public void setEventId(long eventId) {
         this.eventId = eventId;
     }
